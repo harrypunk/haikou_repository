@@ -10,7 +10,9 @@ class MockDataRepository implements StudentRepsitory {
         this.len = len ?? 32;
 
   @override
-  Future<List<Student>> getAllStudents() {
-    return Future.value([]);
+  Stream<List<Student>> get students => Stream.empty();
+
+  @override
+  void getAllStudents() {
   }
 }
