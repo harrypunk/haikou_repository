@@ -23,10 +23,10 @@ class Student {
 class Grade {
   final int id;
   final String name;
-  const Grade({
-    required this.id,
-    required this.name,
-  });
+  const Grade(
+    this.id,
+    this.name,
+  );
 }
 
 class School {
@@ -38,6 +38,7 @@ class School {
     required this.name,
     this.description = "",
   });
+  const School.simple(int id, String name) : this(id: id, name: name);
 }
 
 class Family {
